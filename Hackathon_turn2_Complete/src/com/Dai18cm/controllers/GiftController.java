@@ -1,5 +1,6 @@
 package com.Dai18cm.controllers;
 
+import com.Dai18cm.Utils;
 import com.Dai18cm.models.GameVector;
 import com.Dai18cm.models.Gift;
 import com.Dai18cm.models.GiftType;
@@ -57,7 +58,7 @@ public class GiftController extends SingleController implements Colliable{
                 gift.setGiftType(GiftType.SHIT_INCREASE_LEVEL_SF);
                 animationDrawer = new AnimationDrawer(
                         new String[] {
-                                "resources/exit2.png",
+                                "resources/shit.png",
                         }
                 );
                 break;
@@ -65,7 +66,7 @@ public class GiftController extends SingleController implements Colliable{
                 gift.setGiftType(GiftType.STONE_DECREASE_LEVEL_SF);
                 animationDrawer = new AnimationDrawer(
                         new String[] {
-                                "resources/exit.png",
+                                "resources/stone.png",
                         }
                 );
                 break;
@@ -97,9 +98,11 @@ public class GiftController extends SingleController implements Colliable{
                     ((PlayerController)c).isInBuff(GiftType.SLOW_ENEMY);
                     break;
                 case SHIT_INCREASE_LEVEL_SF:
+                    Utils.playSound("resources/shit.wav", false);
                     ((PlayerController)c).isInBuff(GiftType.SHIT_INCREASE_LEVEL_SF);
                     break;
                 case STONE_DECREASE_LEVEL_SF:
+                    Utils.playSound("resources/stone.wav", false);
                     ((PlayerController)c).isInBuff(GiftType.STONE_DECREASE_LEVEL_SF);
                     break;
             }

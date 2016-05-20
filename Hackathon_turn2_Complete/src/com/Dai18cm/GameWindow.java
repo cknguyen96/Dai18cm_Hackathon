@@ -88,6 +88,7 @@ public class GameWindow extends Frame implements Runnable, GameSceneListener{
 
             }
         });
+        Utils.playSound("resources/BGM.wav", false);
         thread = new Thread(this);
         thread.start();
     }

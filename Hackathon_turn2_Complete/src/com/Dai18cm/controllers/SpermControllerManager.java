@@ -16,7 +16,7 @@ public class SpermControllerManager extends ControllerManager {
         if(PAUSE == false) {
             super.run();
             count++;
-            if (GameConfig.getInst().durationInSeconds(count) > 10) {
+            if (GameConfig.getInst().durationInSeconds(count) > 8) {
                 count = 0;
                 int x = rand.nextInt(GameConfig.DEFAULT_SCREEN_WIDTH / 2 - 20 - 60) + 40;  //random x //tru` di vien cua so
                 SpermController spermController = SpermController.create(x, 0);

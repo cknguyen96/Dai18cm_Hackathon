@@ -1,9 +1,13 @@
 package com.Dai18cm.models;
 
+import com.Dai18cm.Utils;
+
 /**
  * Created by Admin on 5/16/2016.
  */
 public class Status {
+    public static int highestScore = Utils.readFile();
+    public static int playerScore = 0;
     public static final int DEFAULT_HP = 5;
     private static int score = 0;
     private static int hp = DEFAULT_HP;

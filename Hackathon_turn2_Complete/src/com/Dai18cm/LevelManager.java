@@ -48,4 +48,8 @@ public class LevelManager {
                 break;
         }
     }
+    public static void reset(){
+        levelTypeByInt = 0;
+        Status.setCurrentLVScore(0);
+    }
 }

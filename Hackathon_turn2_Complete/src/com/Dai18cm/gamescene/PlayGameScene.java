@@ -46,6 +46,7 @@ public class PlayGameScene extends GameScene {
     public void resetPlayGameScene(){
         Status.resetHP();
         Status.resetScore();
+        LevelManager.reset();
         EnemyControllerManager.setNULL();
         GiftControllerManager.setNULL();
         SpermControllerManager.setNULL();
@@ -69,9 +70,15 @@ public class PlayGameScene extends GameScene {
 
 
         if(Status.getHp() <= 0){
+            if(Status.getScore() > Status.highestScore){
+                Status.highestScore = Status.getScore();
+                Utils.writeFile();
+                GameOverScene.isHighestScore = true;
+            }
+            Status.playerScore = Status.getScore();
             resetPlayGameScene();
             //playerController.getGameObject().setAlive(false);
-            EnemyControllerManager.getInst().levelChange(LevelType.LEVEL_1);
+            EnemyControllerManager.getInst().levelChange(LevelType.LEVEL_0);
             changeGameScene(GameSceneType.GAME_OVER);
 
         }

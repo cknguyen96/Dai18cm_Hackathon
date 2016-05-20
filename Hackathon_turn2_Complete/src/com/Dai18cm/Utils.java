@@ -1,17 +1,46 @@
 package com.Dai18cm;
 
+import com.Dai18cm.models.Status;
+
 import javax.imageio.ImageIO;
 import javax.sound.sampled.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Vector;
 
 /**
  * Created by Admin on 5/16/2016.
  */
 public class Utils {
+
+    public static void writeFile(){
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter("resources/HighScore.txt", "UTF-8");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        writer.println(Status.highestScore);
+        writer.close();
+    }
+
+
+    public static int readFile(){
+        int res = 0;
+        try {
+            for (String line : Files.readAllLines(Paths.get("resources/HighScore.txt"))) {
+                res = Integer.parseInt(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return res;
+    }
 
     public static void playSound(String audioUrl, boolean repeat) {
         File soundFile = new File(audioUrl);
