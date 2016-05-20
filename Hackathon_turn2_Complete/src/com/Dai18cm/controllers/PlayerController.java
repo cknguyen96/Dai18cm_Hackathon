@@ -1,5 +1,6 @@
 package com.Dai18cm.controllers;
 
+import com.Dai18cm.LevelManager;
 import com.Dai18cm.models.*;
 import com.Dai18cm.views.GameDrawer;
 import com.Dai18cm.views.ImageDrawer;
@@ -72,6 +73,12 @@ public class PlayerController extends SingleController implements Colliable{
             case SLOW_ENEMY:
                 EnemyControllerManager.getInst().slowAll();
                 this.inBuff = true;
+                break;
+            case SHIT_INCREASE_LEVEL_SF:
+                LevelManager.increaseLevel();
+                break;
+            case STONE_DECREASE_LEVEL_SF:
+                LevelManager.decreaseLevel();
                 break;
         }
     }

@@ -26,6 +26,8 @@ public class GiftController extends SingleController implements Colliable{
         GameVector gameVector = new GameVector(0 , Gift.SPEED_DEFAULT);
         AnimationDrawer animationDrawer = null;
         switch (giftType){
+            case NONE:
+                break;
             case BIGGER_PLAYER:
                 gift.setGiftType(GiftType.BIGGER_PLAYER);
                 gift.setDurationTime(3000);
@@ -51,6 +53,23 @@ public class GiftController extends SingleController implements Colliable{
                         }
                 );
                 break;
+            case SHIT_INCREASE_LEVEL_SF:
+                gift.setGiftType(GiftType.SHIT_INCREASE_LEVEL_SF);
+                animationDrawer = new AnimationDrawer(
+                        new String[] {
+                                "resources/exit2.png",
+                        }
+                );
+                break;
+            case STONE_DECREASE_LEVEL_SF:
+                gift.setGiftType(GiftType.STONE_DECREASE_LEVEL_SF);
+                animationDrawer = new AnimationDrawer(
+                        new String[] {
+                                "resources/exit.png",
+                        }
+                );
+                break;
+
         }
         return new GiftController(gift , animationDrawer , gameVector);
     }
@@ -76,6 +95,12 @@ public class GiftController extends SingleController implements Colliable{
                     break;
                 case SLOW_ENEMY:
                     ((PlayerController)c).isInBuff(GiftType.SLOW_ENEMY);
+                    break;
+                case SHIT_INCREASE_LEVEL_SF:
+                    ((PlayerController)c).isInBuff(GiftType.SHIT_INCREASE_LEVEL_SF);
+                    break;
+                case STONE_DECREASE_LEVEL_SF:
+                    ((PlayerController)c).isInBuff(GiftType.STONE_DECREASE_LEVEL_SF);
                     break;
             }
             this.gameObject.setAlive(false);
