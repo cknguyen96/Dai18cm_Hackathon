@@ -5,6 +5,7 @@ package com.Dai18cm.gamescene;
  */
 public enum GameSceneType {
     MENU,
+    ABOUT,
     PLAY,
     GAME_OVER
 }

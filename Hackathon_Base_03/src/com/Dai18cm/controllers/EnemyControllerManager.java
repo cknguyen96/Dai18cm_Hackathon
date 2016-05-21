@@ -73,6 +73,7 @@ public class EnemyControllerManager extends ControllerManager {
     public void reset(){
         for(SingleController singleController : this.singleControllerVector){
             ((EnemyController)singleController).setIsInBuff(false);
+//            ((EnemyController)singleController).getGameObject().setSpeed(8);
         }
     }
 

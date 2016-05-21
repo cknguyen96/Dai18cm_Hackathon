@@ -1,6 +1,7 @@
 package com.Dai18cm.gamescene;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 /**
@@ -17,6 +18,9 @@ public abstract class GameScene {
             gameSceneListener.changeGameScence(gameSceneType);
         }
     }
+
+    public abstract void onKeyPress(KeyEvent e);
+    public abstract void onKeyRelease(KeyEvent e);
 
     public abstract void run(Point mousePoint);
 

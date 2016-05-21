@@ -6,11 +6,9 @@ import com.Dai18cm.models.Status;
 import com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage_1_1;
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
+import java.io.*;
 
 /**
  * Created by Admin on 5/16/2016.
@@ -88,6 +86,23 @@ public class GameWindow extends Frame implements Runnable, GameSceneListener{
 
             }
         });
+        this.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                gameScene.onKeyPress(e);
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                gameScene.onKeyRelease(e);
+            }
+        });
+        Utils.playSound("resources/BGM.wav", false);
         thread = new Thread(this);
         thread.start();
     }
@@ -137,8 +152,14 @@ public class GameWindow extends Frame implements Runnable, GameSceneListener{
                 this.gameScene = new MenuGameScene();
                 this.gameScene.setGameSceneListener(this);
                 break;
+            case ABOUT:
+                this.gameScene = new AboutGameScene();
+                this.gameScene.setGameSceneListener(this);
+                break;
             case PLAY:
                 this.gameScene = new PlayGameScene();
+
+
                 this.gameScene.setGameSceneListener(this);
                 //if(Status.getHp() <= 0) gameSceneManager = null;
                 break;

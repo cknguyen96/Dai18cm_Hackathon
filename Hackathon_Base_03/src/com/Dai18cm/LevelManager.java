@@ -9,22 +9,49 @@ import com.Dai18cm.models.SunFlower;
  * Created by Admin on 5/20/2016.
  */
 public class LevelManager {
+//    public static LevelType levelType = LevelType.LEVEL_0;
+    private static int levelTypeByInt = 0;
+    public static void decreaseLevel(){
+        Status.decreaseScore(5);
+        if(levelTypeByInt == 0) return;
+        levelTypeByInt --;
+    }
+    public static void increaseLevel(){
+        Status.increaseScore(5);
+        if(levelTypeByInt == 3) return;
+        levelTypeByInt ++;
+    }
     public static void changeLevel(){
-        if(Status.getScore() >= 0 && Status.getScore() < 25){
-            SunFlower.levelType = LevelType.LEVEL_0;
-            EnemyControllerManager.getInst().levelChange(LevelType.LEVEL_0);
+        if(Status.getCurrentLVScore() >= 10){
+            levelTypeByInt ++;
+            if(levelTypeByInt == 3) levelTypeByInt --;
+            Status.setCurrentLVScore(0);
         }
-        if(Status.getScore() >= 25 && Status.getScore() < 50){
-            SunFlower.levelType = LevelType.LEVEL_1;
-            EnemyControllerManager.getInst().levelChange(LevelType.LEVEL_1);
+        switch (levelTypeByInt){
+            case 0:
+                SunFlower.levelType = LevelType.LEVEL_0;
+                EnemyControllerManager.getInst().levelChange(LevelType.LEVEL_0);
+//                levelType = LevelType.LEVEL_0;
+                break;
+            case 1:
+                SunFlower.levelType = LevelType.LEVEL_1;
+                EnemyControllerManager.getInst().levelChange(LevelType.LEVEL_1);
+//                levelType = LevelType.LEVEL_1;
+                break;
+            case 2:
+                SunFlower.levelType = LevelType.LEVEL_2;
+                EnemyControllerManager.getInst().levelChange(LevelType.LEVEL_2);
+//                levelType = LevelType.LEVEL_2;
+                break;
+            case 3:
+                SunFlower.levelType = LevelType.LEVEL_3;
+                EnemyControllerManager.getInst().levelChange(LevelType.LEVEL_3);
+//                levelType = LevelType.LEVEL_3;
+                break;
         }
-        if(Status.getScore() >= 50 && Status.getScore() < 75){
-            SunFlower.levelType = LevelType.LEVEL_2;
-            EnemyControllerManager.getInst().levelChange(LevelType.LEVEL_2);
-        }
-        if(Status.getScore() >= 75 ){
-            SunFlower.levelType = LevelType.LEVEL_3;
-            EnemyControllerManager.getInst().levelChange(LevelType.LEVEL_3);
-        }
+    }
+    public static void reset(){
+        levelTypeByInt = 0;
+        Status.setCurrentLVScore(0);
     }
 }

@@ -1,5 +1,6 @@
 package com.Dai18cm.controllers;
 
+import com.Dai18cm.Utils;
 import com.Dai18cm.models.*;
 import com.Dai18cm.views.AnimationDrawer;
 import com.Dai18cm.views.GameDrawer;
@@ -38,6 +39,9 @@ public class EnemyController extends SingleController implements Colliable{
         if(!GameConfig.getInst().isInScreen(this.gameObject.getRect())) {
             this.gameObject.setAlive(false);
             Status.decreaseHP();
+        }
+        if(isInBuff == false){
+            gameVector = new GameVector(0, level_speed);
         }
     }
 
@@ -78,6 +82,7 @@ public class EnemyController extends SingleController implements Colliable{
     @Override
     public void onCollide(Colliable c) {
         if(c instanceof PlayerController){
+            Utils.playSound("resources/water.wav", false);
             this.getGameObject().setAlive(false);
             Status.increaseScore();
         }

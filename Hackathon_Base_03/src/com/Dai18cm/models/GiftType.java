@@ -6,5 +6,7 @@ package com.Dai18cm.models;
 public enum GiftType {
     NONE,
     BIGGER_PLAYER,
-    SLOW_ENEMY
+    SLOW_ENEMY,
+    SHIT_INCREASE_LEVEL_SF,
+    STONE_DECREASE_LEVEL_SF
 }

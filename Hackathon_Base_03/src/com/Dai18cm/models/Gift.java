@@ -29,12 +29,12 @@ public class Gift extends GameObject {
     }
     //DUng ham nay` de decrease DurationTime cua Gift
     public void decreaseDurationTime(){
-        if(this.durationTime <= 0){
-            this.durationTime = 0;
-            return;
-        }else{
+//        if(this.durationTime <= 0){
+//            this.durationTime = 0;
+//            return;
+//        }else{
             this.durationTime -= GameConfig.DEFAULT_THREAD_DELAY;
-        }
+//        }
     }
 
     public int getDurationTime() {

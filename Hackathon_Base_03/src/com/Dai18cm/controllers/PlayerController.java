@@ -1,5 +1,6 @@
 package com.Dai18cm.controllers;
 
+import com.Dai18cm.LevelManager;
 import com.Dai18cm.models.*;
 import com.Dai18cm.views.GameDrawer;
 import com.Dai18cm.views.ImageDrawer;
@@ -15,12 +16,12 @@ public class PlayerController extends SingleController implements Colliable{
 
     private boolean inBuff = false;
     public Vector<GiftController> giftControllerVector = new Vector<GiftController>();
-    private PlayerController(Player gameObject, GameDrawer gameDrawer, GameVector gameVecto) {
+    protected PlayerController(Player gameObject, GameDrawer gameDrawer, GameVector gameVecto) {
         super(gameObject, gameDrawer, gameVecto);
         CollisionPool.getInst().add(this);
     }
 
-    private PlayerController(Player gameObject, GameDrawer gameDrawer) {
+    protected PlayerController(Player gameObject, GameDrawer gameDrawer) {
         super(gameObject, gameDrawer);
         CollisionPool.getInst().add(this);
     }
@@ -73,6 +74,14 @@ public class PlayerController extends SingleController implements Colliable{
                 EnemyControllerManager.getInst().slowAll();
                 this.inBuff = true;
                 break;
+            case SHIT_INCREASE_LEVEL_SF:
+                LevelManager.increaseLevel();
+                this.inBuff = true;
+                break;
+            case STONE_DECREASE_LEVEL_SF:
+                LevelManager.decreaseLevel();
+                this.inBuff = true;
+                break;
         }
     }
 
@@ -80,7 +89,11 @@ public class PlayerController extends SingleController implements Colliable{
         Iterator<GiftController> iterator = giftControllerVector.iterator();
         while (iterator.hasNext()) {
             GiftController giftController = iterator.next();
+
             ((Gift)giftController.getGameObject()).decreaseDurationTime();
+
+            System.out.println(((Gift) giftController.getGameObject()).getDurationTime());
+
             if(((Gift)giftController.getGameObject()).getDurationTime() <= 0){
                 switch (((Gift)giftController.getGameObject()).getGiftType()){
                     case NONE:
@@ -91,6 +104,10 @@ public class PlayerController extends SingleController implements Colliable{
                         break;
                     case SLOW_ENEMY:
                         EnemyControllerManager.getInst().reset();
+                        break;
+                    case SHIT_INCREASE_LEVEL_SF:
+                        break;
+                    case STONE_DECREASE_LEVEL_SF:
                         break;
                 }
                 this.inBuff = false;

@@ -26,7 +26,6 @@ public class SpermController extends SingleController implements Colliable {
                 new String[]{
                         "resources/sperm/sperm0.png",
                         "resources/sperm/sperm1.png",
-                        "resources/sperm/sperm2.png",
                         "resources/sperm/sperm3.png",
                         "resources/sperm/sperm4.png",
                         "resources/sperm/sperm5.png",

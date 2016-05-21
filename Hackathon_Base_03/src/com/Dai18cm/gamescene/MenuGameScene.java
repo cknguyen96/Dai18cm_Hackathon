@@ -4,6 +4,7 @@ import com.Dai18cm.Utils;
 import com.Dai18cm.models.GameConfig;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 /**
@@ -14,13 +15,26 @@ public class MenuGameScene extends GameScene {
     Image backgoundImage;
     private boolean onStartButton = false;
     private boolean onExitButton = false;
+    private boolean onAboutButton = false;
     Image starButton;
     Image exitButton;
+    Image aboutButton;
 
     public MenuGameScene(){
         this.backgoundImage = Utils.loadImage("resources/background.png");
         starButton = Utils.loadImage("resources/play.png");
         exitButton = Utils.loadImage("resources/exit2.png");
+        aboutButton = Utils.loadImage("resources/about1.png");
+    }
+
+    @Override
+    public void onKeyPress(KeyEvent e) {
+
+    }
+
+    @Override
+    public void onKeyRelease(KeyEvent e) {
+
     }
 
     @Override
@@ -38,18 +52,13 @@ public class MenuGameScene extends GameScene {
         if(onExitButton == true){
             g.drawImage(this.exitButton , 340 , 470 , 120 , 70 , null);
         }
+        if(onAboutButton == true){
+            g.drawImage(this.aboutButton, 0, 510, 125, 135, null);
+        }
     }
 
     @Override
     public void onMouse(Point mousePoint) {
-//        if(mousePoint.x - 5 > playerController.getGameObject().getX()) {
-//            playerController.getGameVector().dx = Player.DEFAULT_SPEED;
-//        } else if(mousePoint.x + 5 < playerController.getGameObject().getX()) {
-//            playerController.getGameVector().dx = - Player.DEFAULT_SPEED;
-//        } else {
-//            playerController.getGameVector().dx = 0;
-//        }
-        //System.out.println(mousePoint.x +"    " + mousePoint.y);
         if(mousePoint.x >= 340 && mousePoint.x < 460 && mousePoint.y >= 390 && mousePoint.y <= 460){
             onStartButton = true;
         }
@@ -58,6 +67,10 @@ public class MenuGameScene extends GameScene {
             onExitButton = true;
         }
         else onExitButton = false;
+        if(mousePoint.x >= 10 && mousePoint.x <= 130 && mousePoint.y >=550 && mousePoint.y <= 585){
+            onAboutButton = true;
+        }
+        else onAboutButton = false;
 
     }
 
@@ -65,13 +78,16 @@ public class MenuGameScene extends GameScene {
     public void click(MouseEvent e) {
         switch (e.getClickCount()){
             case 1: //hardcode
-                System.out.println(e.getY() + "         " + e.getLocationOnScreen().getX());
-                if(e.getLocationOnScreen().getX() >= 625 && e.getLocationOnScreen().getX() <= 800
-                        && e.getLocationOnScreen().getY() >= 465 && e.getLocationOnScreen().getY() <= 550)
+                System.out.println(e.getX() + "         " + e.getY());
+                if(e.getX() >= 340 && e.getX() <= 460
+                        && e.getY() >= 390 && e.getY() <= 460)
                 changeGameScene(GameSceneType.PLAY);
-                else if(e.getLocationOnScreen().getX() >= 625 && e.getLocationOnScreen().getX() <= 800
-                        && e.getLocationOnScreen().getY() >= 570 && e.getLocationOnScreen().getY() <= 640)
+                else if(e.getX() >= 340 && e.getX() <= 460
+                        && e.getY() >= 475 && e.getY() <= 545)
                     GameConfig.getInst().checkOutGame = true;
+                else if(e.getX() >= 10 && e.getX() <= 130
+                        && e.getY() >= 550 && e.getY() <= 585)
+                    changeGameScene(GameSceneType.ABOUT);
                 break;
         }
     }

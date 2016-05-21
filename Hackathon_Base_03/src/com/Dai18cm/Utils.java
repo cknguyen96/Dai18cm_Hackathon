@@ -1,17 +1,81 @@
 package com.Dai18cm;
 
+import com.Dai18cm.gamescene.GameScene;
+import com.Dai18cm.models.Status;
+
 import javax.imageio.ImageIO;
 import javax.sound.sampled.*;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.Vector;
 
 /**
  * Created by Admin on 5/16/2016.
  */
 public class Utils {
+
+    public static Object readObjectToXML(){
+        XMLDecoder d = null;
+        try {
+            d = new XMLDecoder(
+                    new BufferedInputStream(
+                            new FileInputStream("Test.xml")));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Object result = d.readObject();
+        d.close();
+        return result;
+    }
+
+    public static void writeObjectToXML(GameScene gameScene){
+        XMLEncoder e = null;
+        try {
+            e = new XMLEncoder(
+                    new BufferedOutputStream(
+                            new FileOutputStream("Test.xml")));
+        } catch (FileNotFoundException e1) {
+            e1.printStackTrace();
+        }
+        e.writeObject(gameScene);
+        e.close();
+    }
+
+
+    public static void writeFile(){
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter("resources/HighScore.txt", "UTF-8");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        writer.println(Status.highestScore);
+        writer.close();
+    }
+
+
+    public static int readFile(){
+        int res = 0;
+        try {
+            for (String line : Files.readAllLines(Paths.get("resources/HighScore.txt"))) {
+                res = Integer.parseInt(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            Status.highestScore = 0;
+            Utils.writeFile();
+        }
+        return res;
+    }
 
     public static void playSound(String audioUrl, boolean repeat) {
         File soundFile = new File(audioUrl);
