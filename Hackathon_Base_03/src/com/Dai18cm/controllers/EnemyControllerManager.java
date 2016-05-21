@@ -34,17 +34,17 @@ public class EnemyControllerManager extends ControllerManager {
             case LEVEL_1:
                 SPEED_RANDOM = 1000;
                 SPACE_RANDOM = 100;
-                EnemyController.level_speed = 6;
+                EnemyController.level_speed = 5;
                 break;
             case LEVEL_2:
                 SPEED_RANDOM = 900;
                 SPACE_RANDOM = 90;
-                EnemyController.level_speed = 8;
+                EnemyController.level_speed = 6;
                 break;
             case LEVEL_3:
                 SPEED_RANDOM = 700;
                 SPACE_RANDOM = 70;
-                EnemyController.level_speed = 10;
+                EnemyController.level_speed = 8;
                 break;
         }
     }

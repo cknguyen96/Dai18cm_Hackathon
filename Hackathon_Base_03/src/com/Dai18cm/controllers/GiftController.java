@@ -1,6 +1,7 @@
 package com.Dai18cm.controllers;
 
 import com.Dai18cm.Utils;
+import com.Dai18cm.models.GameConfig;
 import com.Dai18cm.models.GameVector;
 import com.Dai18cm.models.Gift;
 import com.Dai18cm.models.GiftType;
@@ -81,6 +82,16 @@ public class GiftController extends SingleController implements Colliable{
                         }
                 );
                 break;
+            case ABLE_TO_SHOT:
+                gift.setGiftType(GiftType.ABLE_TO_SHOT);
+                //Duration can tinh lai
+                gift.setDurationTime(100000);
+                animationDrawer = new AnimationDrawer(
+                        new String[]{
+                                "resources/bullet/bullet.png",
+                        }
+                );
+                break;
         }
         return new GiftController(gift , animationDrawer , gameVector);
     }
@@ -92,6 +103,10 @@ public class GiftController extends SingleController implements Colliable{
 
     @Override
     public void run() {
+//        if(!GameConfig.getInst().isInScreen(this.gameObject.getRect())) {
+//            this.gameObject.setAlive(false);
+////            Status.decreaseHP();
+//        }
         super.run();
     }
 
@@ -119,6 +134,10 @@ public class GiftController extends SingleController implements Colliable{
                     break;
                 case HEART_INCRE_HP:
                     ((PlayerController)c).isInBuff(GiftType.HEART_INCRE_HP);
+                    break;
+                case ABLE_TO_SHOT:
+                    ((PlayerController)c).isInBuff(GiftType.ABLE_TO_SHOT);
+                    PlayerController.AMOUNT_OF_BULLET ++;
                     break;
             }
             this.gameObject.setAlive(false);

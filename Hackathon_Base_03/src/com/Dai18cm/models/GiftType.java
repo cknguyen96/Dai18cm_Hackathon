@@ -9,5 +9,6 @@ public enum GiftType {
     SLOW_ENEMY,
     SHIT_INCREASE_LEVEL_SF,
     STONE_DECREASE_LEVEL_SF,
-    HEART_INCRE_HP
+    HEART_INCRE_HP,
+    ABLE_TO_SHOT
 }

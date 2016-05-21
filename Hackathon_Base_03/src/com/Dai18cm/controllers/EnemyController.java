@@ -62,7 +62,7 @@ public class EnemyController extends SingleController implements Colliable{
         if(isInBuff == false){
             gameVector = new GameVector(0, level_speed);
         } else{
-            enemy.setSpeed(level_speed/2);
+            enemy.setSpeed(level_speed - 2);
             System.out.println(enemy.getSpeed());
             gameVector = new GameVector(0, enemy.getSpeed());
         }

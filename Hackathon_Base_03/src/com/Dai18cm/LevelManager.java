@@ -24,7 +24,7 @@ public class LevelManager {
     public static void changeLevel(){
         if(Status.getCurrentLVScore() >= 10){
             levelTypeByInt ++;
-            if(levelTypeByInt == 3) levelTypeByInt --;
+            if(levelTypeByInt == 4) levelTypeByInt --;
             Status.setCurrentLVScore(0);
         }
         switch (levelTypeByInt){
