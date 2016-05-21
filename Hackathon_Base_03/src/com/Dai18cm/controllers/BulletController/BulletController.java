@@ -1,5 +1,6 @@
 package com.Dai18cm.controllers.BulletController;
 
+import com.Dai18cm.Utils;
 import com.Dai18cm.controllers.Colliable;
 import com.Dai18cm.controllers.CollisionPool;
 import com.Dai18cm.controllers.Dung.DungBulletController;
@@ -46,6 +47,7 @@ public class BulletController extends SingleController implements Colliable {
                 Status.increaseScore(20);
             }
             gameObject.setAlive(false);
+            Utils.playSound("resources/BOSS/dung/as.wav", false);
             this.gameObject.setAlive(false);
         }
         else if(c instanceof DungBulletController) {
