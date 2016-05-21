@@ -24,13 +24,15 @@ public class SpermController extends SingleController implements Colliable {
         AnimationDrawer animationDrawer = null;
         animationDrawer = new AnimationDrawer(
                 new String[]{
-                        "resources/sperm/sperm0.png",
-                        "resources/sperm/sperm1.png",
-                        "resources/sperm/sperm3.png",
-                        "resources/sperm/sperm4.png",
-                        "resources/sperm/sperm5.png",
-                        "resources/sperm/sperm6.png",
-                        "resources/sperm/sperm7.png"
+                        "resources/BOSS/worm/worm1.png",
+                        "resources/BOSS/worm/worm2.png",
+                        "resources/BOSS/worm/worm3.png",
+                        "resources/BOSS/worm/worm4.png",
+                        "resources/BOSS/worm/worm5.png",
+                        "resources/BOSS/worm/worm6.png",
+                        "resources/BOSS/worm/worm7.png",
+                        "resources/BOSS/worm/worm8.png",
+
                 }
         );
         return new SpermController(sperm , animationDrawer , gameVector);

@@ -47,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DungBulletController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DungBulletController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/controllers/Dung/DungBulletController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="206">
@@ -57,24 +57,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DungController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/controllers/Dung/DungController.java">
+      <file leaf-file-name="SpermController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/controllers/SpermController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-122">
-              <caret line="50" column="122" selection-start-line="50" selection-start-column="122" selection-end-line="50" selection-end-column="122" />
+            <state relative-caret-position="170">
+              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BulletController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/controllers/BulletController/BulletController.java">
+      <file leaf-file-name="Sperm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/models/Sperm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnimationDrawer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/views/AnimationDrawer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpermControllerManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/controllers/SpermControllerManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,26 +132,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnemyControllerManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/controllers/EnemyControllerManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dung.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/models/Dung.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -153,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/Dai18cm/models/Enemy.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/models/Player.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/ControllerManager.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/models/TargetImage.java" />
@@ -163,12 +160,10 @@
         <option value="$PROJECT_DIR$/src/com/Dai18cm/views/SunFlowerDrawer.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/LevelController.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/SunFlowerController.java" />
-        <option value="$PROJECT_DIR$/src/com/Dai18cm/views/AnimationDrawer.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/models/GameConfig.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/SingleController.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/HPStatusController.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/models/Gift.java" />
-        <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/SpermController.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/SpermControllerManager.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/gamescene/GameScene.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/gamescene/GameOverScene.java" />
@@ -204,6 +199,9 @@
         <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/BulletController/BulletController.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/EnemyController.java" />
         <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/PlayerController.java" />
+        <option value="$PROJECT_DIR$/src/com/Dai18cm/controllers/SpermController.java" />
+        <option value="$PROJECT_DIR$/src/com/Dai18cm/models/Sperm.java" />
+        <option value="$PROJECT_DIR$/src/com/Dai18cm/views/AnimationDrawer.java" />
       </list>
     </option>
   </component>
@@ -418,6 +416,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="BulletController" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hackathon_Base_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hackathon_Base_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hackathon_Base_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hackathon_Base_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BOSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hackathon_Base_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hackathon_Base_03" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BOSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="worm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -813,12 +865,12 @@
       <workItem from="1463733006529" duration="5360000" />
       <workItem from="1463738539700" duration="3588000" />
       <workItem from="1463758877732" duration="31003000" />
-      <workItem from="1463796223058" duration="19140000" />
+      <workItem from="1463796223058" duration="19421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101986000" />
+    <option name="totallyTimeSpent" value="102267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -879,11 +931,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/about1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/background.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -943,14 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/controllers/SpermControllerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1023,14 +1062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/views/AnimationDrawer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1224,14 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/controllers/SpermController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/models/Dung.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1319,6 +1342,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/controllers/SpermControllerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/controllers/SpermController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/models/Sperm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Dai18cm/views/AnimationDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding />
         </state>
       </provider>

@@ -16,7 +16,7 @@ public class AnimationDrawer extends GameDrawer {
     private Vector<Image> imageVector;
     private int imageIdx = 0;
     private int count = 0;
-    public static final int TIME_PER_FRAME_ANIMATION = 80;
+    public static final int TIME_PER_FRAME_ANIMATION = 50;
 
     public AnimationDrawer(String[] urls){
         this.imageVector = new Vector<Image>();
