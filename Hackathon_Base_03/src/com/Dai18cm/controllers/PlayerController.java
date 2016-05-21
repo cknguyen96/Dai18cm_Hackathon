@@ -82,6 +82,10 @@ public class PlayerController extends SingleController implements Colliable{
                 LevelManager.decreaseLevel();
                 this.inBuff = true;
                 break;
+            case HEART_INCRE_HP:
+                Status.increaseHP();
+                this.inBuff = true;
+                break;
         }
     }
 
@@ -108,6 +112,8 @@ public class PlayerController extends SingleController implements Colliable{
                     case SHIT_INCREASE_LEVEL_SF:
                         break;
                     case STONE_DECREASE_LEVEL_SF:
+                        break;
+                    case HEART_INCRE_HP:
                         break;
                 }
                 this.inBuff = false;

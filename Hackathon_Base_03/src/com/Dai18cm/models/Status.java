@@ -29,6 +29,7 @@ public class Status {
         return score;
     }
 
+
     public static void increaseScore() {
         score++;
         currentLVScore ++;
@@ -40,6 +41,10 @@ public class Status {
 
     public static void decreaseHP() {
         if(hp > 0) hp--;
+    }
+
+    public static void increaseHP(){
+        if(hp < 5) hp++;
     }
 
     public static void resetScore(){

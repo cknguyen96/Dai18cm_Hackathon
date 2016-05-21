@@ -10,13 +10,12 @@ import java.awt.event.MouseEvent;
 /**
  * Created by Admin on 5/21/2016.
  */
-public class AboutGameScene extends GameScene {
+public class HelpGameScene extends GameScene {
     Image backgroundImage;
     private boolean onBackButton = false;
     Image backButton;
-
-    public AboutGameScene(){
-        backgroundImage = Utils.loadImage("resources/background_about.png");
+    public HelpGameScene(){
+        backgroundImage = Utils.loadImage("resources/background_help.png");
         backButton = Utils.loadImage("resources/back2.png");
     }
     @Override
@@ -30,9 +29,8 @@ public class AboutGameScene extends GameScene {
     }
 
     @Override
-    public void run(Point mousePoint) {onMouse(mousePoint);
-
-
+    public void run(Point mousePoint) {
+        onMouse(mousePoint);
     }
 
     @Override

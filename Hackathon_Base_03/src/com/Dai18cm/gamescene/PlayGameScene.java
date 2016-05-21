@@ -21,7 +21,7 @@ public class PlayGameScene extends GameScene {
     public boolean pause = false;
 
     private PlayerController playerController;
-    private Player2Controller player2Controller;
+   // private Player2Controller player2Controller;
 
     Image backgoundImage;
     private Vector<Controller> controllerVect;
@@ -40,15 +40,16 @@ public class PlayGameScene extends GameScene {
         hpStatusController = new HPStatusController();
 
         this.playerController = PlayerController.getInst();
-        this.player2Controller = Player2Controller.getInst();
+       // this.player2Controller = Player2Controller.getInst();
         this.sunFlowerController = SunFlowerController.getInst();
 
         controllerVect.add(EnemyControllerManager.getInst());
         controllerVect.add(GiftControllerManager.getInst());
         controllerVect.add(SpermControllerManager.getInst());
+        controllerVect.add(ButterflyControllerManager.getInst());
         controllerVect.add(this.sunFlowerController);
         controllerVect.add(this.playerController);
-        controllerVect.add(this.player2Controller);
+       // controllerVect.add(this.player2Controller);
 
         this.backgoundImage = Utils.loadImage("resources/background_game.png");
     }
@@ -60,35 +61,36 @@ public class PlayGameScene extends GameScene {
         EnemyControllerManager.setNULL();
         GiftControllerManager.setNULL();
         SpermControllerManager.setNULL();
+        ButterflyControllerManager.setNULL();
         //this.playerController.setNULL();
         collisionPool.reset();
     }
 
     @Override
     public void onKeyPress(KeyEvent e) {
-        PlayerDirection playerDirection = PlayerDirection.NONE;
-
-        switch (e.getKeyCode()) {
-            case KeyEvent.VK_LEFT:
-                playerDirection = PlayerDirection.LEFT;
-                break;
-            case KeyEvent.VK_RIGHT:
-                playerDirection = PlayerDirection.RIGHT;
-                break;
-        }
-        this.player2Controller.move(playerDirection);
+//        PlayerDirection playerDirection = PlayerDirection.NONE;
+//
+//        switch (e.getKeyCode()) {
+//            case KeyEvent.VK_LEFT:
+//                playerDirection = PlayerDirection.LEFT;
+//                break;
+//            case KeyEvent.VK_RIGHT:
+//                playerDirection = PlayerDirection.RIGHT;
+//                break;
+//        }
+//        this.player2Controller.move(playerDirection);
     }
 
     @Override
     public void onKeyRelease(KeyEvent e) {
-        PlayerDirection playerDirection = PlayerDirection.NONE;
-        switch (e.getKeyCode()) {
-            case KeyEvent.VK_LEFT:
-            case KeyEvent.VK_RIGHT:
-                playerDirection = PlayerDirection.STOP_X;
-                break;
-        }
-        this.player2Controller.move(playerDirection);
+//        PlayerDirection playerDirection = PlayerDirection.NONE;
+//        switch (e.getKeyCode()) {
+//            case KeyEvent.VK_LEFT:
+//            case KeyEvent.VK_RIGHT:
+//                playerDirection = PlayerDirection.STOP_X;
+//                break;
+//        }
+//        this.player2Controller.move(playerDirection);
     }
 
     @Override
@@ -124,11 +126,13 @@ public class PlayGameScene extends GameScene {
             EnemyControllerManager.getInst().PAUSE = true;
             GiftControllerManager.getInst().PAUSE = true;
             SpermControllerManager.getInst().PAUSE = true;
+            ButterflyControllerManager.getInst().PAUSE = true;
         }else {
             this.playerController.setPause(false);
             EnemyControllerManager.getInst().PAUSE = false;
             GiftControllerManager.getInst().PAUSE = false;
             SpermControllerManager.getInst().PAUSE = false;
+            ButterflyControllerManager.getInst().PAUSE = false;
         }
     }
 

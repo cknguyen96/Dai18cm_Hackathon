@@ -72,7 +72,15 @@ public class GiftController extends SingleController implements Colliable{
                         }
                 );
                 break;
-
+            case HEART_INCRE_HP:
+                gift.setGiftType(GiftType.HEART_INCRE_HP);
+                gift.setDurationTime(1);
+                animationDrawer = new AnimationDrawer(
+                        new String[]{
+                                "resources/Desktop/heart.png",
+                        }
+                );
+                break;
         }
         return new GiftController(gift , animationDrawer , gameVector);
     }
@@ -108,6 +116,9 @@ public class GiftController extends SingleController implements Colliable{
                 case STONE_DECREASE_LEVEL_SF:
                     Utils.playSound("resources/stone.wav", false);
                     ((PlayerController)c).isInBuff(GiftType.STONE_DECREASE_LEVEL_SF);
+                    break;
+                case HEART_INCRE_HP:
+                    ((PlayerController)c).isInBuff(GiftType.HEART_INCRE_HP);
                     break;
             }
             this.gameObject.setAlive(false);

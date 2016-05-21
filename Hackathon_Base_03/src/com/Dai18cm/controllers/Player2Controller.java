@@ -31,7 +31,7 @@ public class Player2Controller extends PlayerController implements Colliable {
         Player2Controller player2Controller = null;
         if (inst == null) {
             Player player = new Player(200, 510, Player.DEFAULT_WIDTH , Player.DEFAULT_HEIGHT);
-            ImageDrawer imageDrawer = new ImageDrawer("resources/Fairy_moe/moe_norm_resize.png");
+            ImageDrawer imageDrawer = new ImageDrawer("resources/condom.png");
             player2Controller = new Player2Controller(player, imageDrawer);
         }
         return player2Controller;
@@ -46,5 +46,8 @@ public class Player2Controller extends PlayerController implements Colliable {
         }
     }
 
-
+    @Override
+    public void paint(Graphics g) {
+        this.gameDrawer.paint(this.gameObject, g);
+    }
 }

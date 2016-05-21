@@ -156,6 +156,10 @@ public class GameWindow extends Frame implements Runnable, GameSceneListener{
                 this.gameScene = new AboutGameScene();
                 this.gameScene.setGameSceneListener(this);
                 break;
+            case HELP:
+                this.gameScene = new HelpGameScene();
+                this.gameScene.setGameSceneListener(this);
+                break;
             case PLAY:
                 this.gameScene = new PlayGameScene();
 

@@ -16,15 +16,18 @@ public class MenuGameScene extends GameScene {
     private boolean onStartButton = false;
     private boolean onExitButton = false;
     private boolean onAboutButton = false;
+    private boolean onHelpButton = false;
     Image starButton;
     Image exitButton;
     Image aboutButton;
+    Image helpButton;
 
     public MenuGameScene(){
         this.backgoundImage = Utils.loadImage("resources/background.png");
         starButton = Utils.loadImage("resources/play.png");
         exitButton = Utils.loadImage("resources/exit2.png");
-        aboutButton = Utils.loadImage("resources/about1.png");
+        aboutButton = Utils.loadImage("resources/about2.png");
+        helpButton = Utils.loadImage("resources/help2.png");
     }
 
     @Override
@@ -53,7 +56,10 @@ public class MenuGameScene extends GameScene {
             g.drawImage(this.exitButton , 340 , 470 , 120 , 70 , null);
         }
         if(onAboutButton == true){
-            g.drawImage(this.aboutButton, 0, 510, 125, 135, null);
+            g.drawImage(this.aboutButton, 20, 510, 145, 70, null);
+        }
+        if(onHelpButton == true){
+            g.drawImage(this.helpButton, 660, 510, 130, 70, null);
         }
     }
 
@@ -67,10 +73,14 @@ public class MenuGameScene extends GameScene {
             onExitButton = true;
         }
         else onExitButton = false;
-        if(mousePoint.x >= 10 && mousePoint.x <= 130 && mousePoint.y >=550 && mousePoint.y <= 585){
+        if(mousePoint.x >= 20 && mousePoint.x <= 170 && mousePoint.y >=515 && mousePoint.y <= 575){
             onAboutButton = true;
         }
         else onAboutButton = false;
+        if(mousePoint.x >= 660 && mousePoint.x <= 770 && mousePoint.y >=510 && mousePoint.y <= 580){
+            onHelpButton = true;
+        }
+        else onHelpButton = false;
 
     }
 
@@ -85,9 +95,12 @@ public class MenuGameScene extends GameScene {
                 else if(e.getX() >= 340 && e.getX() <= 460
                         && e.getY() >= 475 && e.getY() <= 545)
                     GameConfig.getInst().checkOutGame = true;
-                else if(e.getX() >= 10 && e.getX() <= 130
-                        && e.getY() >= 550 && e.getY() <= 585)
+                else if(e.getX() >= 20 && e.getX() <= 170
+                        && e.getY() >= 515 && e.getY() <= 575)
                     changeGameScene(GameSceneType.ABOUT);
+                else if(e.getX() >= 660 && e.getX() <= 770
+                        && e.getY() >= 510 && e.getY() <= 580)
+                    changeGameScene(GameSceneType.HELP);
                 break;
         }
     }
